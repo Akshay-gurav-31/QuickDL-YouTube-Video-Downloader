@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: quickdl
+    env: python
+    buildCommand: pip install -r requirements.txt && mkdir -p bin && curl -L https://github.com/ffbinaries/ffbinaries-prebuilt/releases/download/v4.4.1/ffmpeg-4.4.1-linux-64.zip -o ffmpeg.zip && unzip -o ffmpeg.zip -d bin && curl -L https://github.com/ffbinaries/ffbinaries-prebuilt/releases/download/v4.4.1/ffprobe-4.4.1-linux-64.zip -o ffprobe.zip && unzip -o ffprobe.zip -d bin && rm ffmpeg.zip ffprobe.zip && chmod +x bin/ffmpeg bin/ffprobe
+    startCommand: PATH=$PATH:$(pwd)/bin gunicorn app:app
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.0
