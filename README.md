@@ -23,6 +23,16 @@ Built on the robust **yt-dlp** engine and a sleek **Flask** backend, QuickDL all
 
 ---
 
+## 📷 Screenshots
+
+<div align="center">
+  <img src="static/Screenshot 2026-02-05 195654.png" alt="QuickDL UI 1" width="800">
+  <br><br>
+  <img src="static/Screenshot 2026-02-05 195726.png" alt="QuickDL UI 2" width="800">
+</div>
+
+---
+
 ## ⚖️ Open Source & Standard
 
 This project follows standard open-source conventions:
